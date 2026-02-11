@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smiley Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+    #display {
+      font-size: 48px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generate a Smiley!</h1>
+  <button id="generate">Create Smiley</button>
+  <div id="display"></div>
+  <script>
+    const smiles = ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤩", "🥳", "😎", "🤓", "🧐", "😕", "😟", "🙁", "☹️", "😮", "😯", "😲", "😳", "🥺", "😦", "😧", "😨", "😰", "😥", "😢", "😭", "😱", "😖", "😣", "😞", "😓", "😩", "😫", "😤", "😡", "😠", "🤬", "😷", "🤒", "🤕", "🤢", "🤮", "🥴", "😵", "🤯", "🤠", "🥳", "🥸", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾"];
+    const display = document.getElementById('display');
+    document.getElementById('generate').addEventListener('click', () => {
+      const random = smiles[Math.floor(Math.random() * smiles.length)];
+      display.textContent += random;
+    });
+  </script>
+</body>
+</html>
